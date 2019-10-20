@@ -21,7 +21,7 @@
             <h1 class="display-4">Control de empleados</h1>
             <button class="btn btn-success" data-toggle="modal" data-target="#addEmployeeModal">Agregar
               Emeplado</button>
-            <table class="table table-striped">
+            <table class="table table-striped table-hover table-responsive-md">
               <thead>
                 <tr>
                   <th scope="col">#</th>
@@ -30,7 +30,8 @@
                   <th scope="col">Salario</th>
                   <th scope="col">Email</th>
                   <th scope="col">Edad</th>
-                  <th></th>
+                  <th scope="col">Editar</th>
+                  <th scope="col">Borrar</th>
                 </tr>
               </thead>
               <tbody>
@@ -50,7 +51,8 @@
                       @click="employee.edit = !employee.edit">&#9998;</button>
                     <button type="button" class="btn btn-warning" v-if="employee.edit"
                       @click="edit(employee, index)">&#9998;</button>
-                    <button type="button" class="btn btn-danger" @click="remove(employee.id, index)">&#9747;</button>
+                  </td>
+                  <td><button type="button" class="btn btn-danger" @click="remove(employee.id, index)">&#9747;</button>
                   </td>
                 </tr>
               </tbody>
